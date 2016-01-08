@@ -5,3 +5,4 @@ license = GPLv2+
 icon = geogebra
 bundle_id = org.geogebra
 exec = geogebra
+show_launcher = yes
