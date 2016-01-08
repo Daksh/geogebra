@@ -13,7 +13,11 @@ export LD_PRELOAD=$PWD/lib/libsugarize.so:$LD_PRELOAD
 if [ "`uname -a | grep x86_64`" ]; then
     export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_64/bin:$PATH
 elif [ "`uname -a | grep armv7l`" ]; then
-    export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_arm/bin:$PATH
+    #export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_arm/bin:$PATH
+    #$SUGAR_ACTIVITIES_PATH does not return any path on XO4
+    cd ..
+    export PATH=$PWD/Java.activity/jre_arm/bin:$PATH
+    cd GeoGebra.activity
 else
     export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_32/bin:$PATH
 fi
