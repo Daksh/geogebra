@@ -16,6 +16,7 @@ elif [ "`uname -a | grep armv7l`" ]; then
     export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_arm/bin:$PATH
 else
     export PATH=$SUGAR_ACTIVITIES_PATH/Java.activity/jre_32/bin:$PATH
+fi
 
 args="--sugar --showSplash=false"
 [ "$SUGAR_SCALING" == 100 ] && args="$args --fontSize=20"
